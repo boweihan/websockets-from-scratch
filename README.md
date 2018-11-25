@@ -42,6 +42,18 @@ byte 7 to end - content
 
 4.  Client MUST encode messages with a mask. The masking key needs to be unpredicable and derived from a strong source of entropy. This prevents malicious applications from changing bytes on the wire. The server cannot mask the message.
 
+### TODO
+
+```
+- Handle thousands of concurrent connections
+- ping/pong heartbeats
+- handle messages that aren't UTF-8 text data
+- security
+- proxying
+- handling different ws protocol versions (instead of just version 13)
+- message fragmentation (instead of complete messages)
+```
+
 ### Resources
 
 https://blog.pusher.com/websockets-from-scratch/
