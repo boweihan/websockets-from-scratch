@@ -2,6 +2,16 @@
 
 Just a little fun project to learn what's going on under the hood with websockets.
 
+### Run the project
+
+Clone the repo and run `ruby main.rb`. Navigate to localhost:4567 and in your browser console type the following to initiate a connection and send / view a message.
+
+```
+var socket = new WebSocket("ws://localhost:4567");
+socket.onmessage = function(event){console.log(event.data);};
+socket.send("hello world!");
+```
+
 ### Websockets and Specification
 
 Similar to HTTP - websockets is a layer on top of TCP. While an HTTP response closes the connection, a websocket connection stays open. This makes websockets great for realtime functionality in chat apps, streaming, etc.
